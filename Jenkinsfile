@@ -6,6 +6,12 @@ pipeline {
                 git 'https://github.com/Kathirsindhu/pipeline.git'
             }
         }
+        stage('SonarQube Analysis') {
+            def scannerHome = tool 'SonarScanner';
+            withSonarQubeEnv() {
+                sh "${scannerHome}/bin/sonar-scanner"
+           }
+        }
         stage('Build the Docker image') {
             steps {
                 sh 'sudo docker build -t newimage /var/lib/jenkins/workspace/kuber'
