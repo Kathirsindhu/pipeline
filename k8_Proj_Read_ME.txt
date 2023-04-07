@@ -61,7 +61,7 @@ Docker Installation:
 
 Git Installation:
 
-1) sudo apt install git
+1) sudo apt install git -y
 
 =================================================================================
 
