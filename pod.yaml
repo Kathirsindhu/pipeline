@@ -27,5 +27,5 @@ spec:
     spec:
       containers:
         - name: hello
-          image: jenkins/jenkins:lts
+          image: kathirsindhu/newimage:latest
           imagePullPolicy: Always
